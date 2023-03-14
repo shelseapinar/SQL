@@ -1,0 +1,18 @@
+CREATE TABLE city_fits (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER);
+ 
+ INSERT INTO city_fits VALUES (1, 'Flower Pants', 'Yellow', 65.99);
+ INSERT INTO city_fits VALUES (2, 'Jumper', 'Blue', 109.99);
+ INSERT INTO city_fits VALUES (3, 'Corduroy Overalls', 'Dark Brown', 89.99);
+ INSERT INTO city_fits VALUES (4, 'High Wasted Slacks', 'Black', 45.99);
+ INSERT INTO city_fits VALUES (5, 'Organic Cotton Tee', 'Mauve', 34.99);
+ INSERT INTO city_fits VALUES (6, 'Knitted Sweater', 'Beige', 64.99);
+ INSERT INTO city_fits VALUES (7, 'Midi Dress', 'Pastel/Multi', 89.99);
+ INSERT INTO city_fits VALUES (8, 'Mini Belt Bag', 'Olive', 39.99);
+ INSERT INTO city_fits VALUES (9, 'Button Down', 'Heather Grey', 62.99);
+ INSERT INTO city_fits VALUES (10, 'Wide-Legged Jumpsuit', 'Light Blue', 139.99);
+ INSERT INTO city_fits VALUES (11, 'Sports Bra', 'Navy', 49.99);
+ INSERT INTO city_fits VALUES (12, 'Hiking Jogger', 'Cranberry Red', 79.99);
+ INSERT INTO city_fits VALUES (13, 'Linen Pant', 'White', 89.99);
+ INSERT INTO city_fits VALUES (14, 'Bike Short', 'Dress Blue', 49.99);
+ INSERT INTO city_fits VALUES (15, 'Baseball Cap', 'Bright White', 24.99);
+SELECT * FROM city_fits ORDER BY price 

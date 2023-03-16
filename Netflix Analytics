@@ -1,0 +1,30 @@
+#In this SQL code, I'm querying a database that's holding Nexflix data to answer questions about the data. 
+
+
+SELECT people.show_id, people.director, titles.title, titles.type
+FROM "CharlotteChaze/BreakIntoTech"."netflix_people" people
+LEFT JOIN "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
+ON people.show_id = titles.show_id;
+
+
+SELECT COUNT (*) FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" 
+WHERE type = 'Movie';
+
+SELECT max(date(date_added))
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info";
+
+SELECT title
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+ORDER BY title asc;
+
+SELECT Director
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
+LEFT JOIN "CharlotteChaze/BreakIntoTech"."netflix_people" people
+ON people.show_id=titles.show_id
+WHERE title = 'Bright Star';
+
+SELECT title, release_year
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
+WHERE type = 'Movie'
+ORDER BY release_year asc
+LIMIT 1;

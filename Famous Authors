@@ -1,0 +1,47 @@
+CREATE TABLE authors (id INTEGER PRIMARY KEY AUTOINCREMENT,
+first_name TEXT,
+last_name TEXT,
+min_estimated_sales INTEGER,
+max_estimated_sales INTEGER,
+original_language TEXT,
+genre_and_or_or_major_works TEXT,
+number_of_books INTEGER,
+nationality TEXT);
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("William", "Shakespeare", 2000000000, 4000000000, "English", "Plays and poetry e.g.A Midsummer Night's Dream, Romeo and Juliet, Macbeth", 42, "English");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Agatha", "Christie", 2000000000, 4000000000, "English", "Whodunits including the Miss Marple and Hercule Poirot series", 85, "British");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Barbara", "Cartland", 500000000, 1000000000, "English", "Romance", 723, "British");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Danielle", "Steel", 500000000, 800000000, "English", "General fiction, Romance", 179, "American");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Harold", "Robbins", 750000000, 750000000, "English", "Adventure", 23, "American");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Georges", "Simenon", 500000000, 700000000, "French", "Detectives, Maigret, romans dur", 570, "Belgian");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Enid", "Blyton", NULL, 600000000, "English", "Children's literature, Noddy, The Famous Five, The Secret Seven", 800, "English");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Sidney", "Sheldon", 370000000, 600000000, "English", "Suspense", 21, "American");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Joanne", "Rowling", 500000000, 500000000, "English", "Harry Potter, Fantastic Beasts and Where to Find Them, Cormoran Strike, fantasy, crime fiction", 15, "British");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Gilbert", "Patten", 150000000, 500000000, "English", "Adolescent adventures", 209, "American");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Theodor", "Geisel", 100000000, 500000000, "English", "Children's literature", 44, "American");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Eiichiro", "Oda", 490000000, 490000000, "Japanese", "Manga, One Piece", 100, "Japanese");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Akira", "Toriyama", 298000000, 438000000, "Japanese", "Manga, Dr. Slump, Dragon Ball, Dragon Ball Super", 66, "Japanese");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Leo", "Tolstoy", NULL, 413000000, "Russian", "War and Peace, Anna Karenina", 48, "Russian");
+INSERT INTO authors (first_name, last_name, min_estimated_sales, max_estimated_sales, original_language, genre_and_or_or_major_works, number_of_books, nationality) VALUES ("Corin", "Tellado", 400000000, 400000000, "Spanish", "Romance", 4000, "Spanish");
+SELECT * FROM authors;
+CREATE TABLE alive (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+alive_or_not TEXT);
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("Yes");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("Yes");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("Yes");
+INSERT INTO alive (alive_or_not) VALUES ("Yes");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+INSERT INTO alive (alive_or_not) VALUES ("No");
+SELECT * FROM alive;
+SELECT authors.first_name, authors.last_name, alive_or_not FROM authors
+JOIN alive
+ON authors.id = alive.id;

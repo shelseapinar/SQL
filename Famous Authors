@@ -45,3 +45,5 @@ SELECT * FROM alive;
 SELECT authors.first_name, authors.last_name, alive_or_not FROM authors
 JOIN alive
 ON authors.id = alive.id;
+
+SELECT authors.first_name, authors.last_name, authors.min_estimated_sales FROM authors ORDER BY min_estimated_sales 

@@ -24,7 +24,6 @@ duration_ms integer NOT NULL,
 time_signature integer NOT NULL)
 
 #Then I inserted the Spotify Data .csv into the table.
-
 #Next, I explored the data using the following SQL. 
 
 #First I determined the avg popularity, danceability, and energy by artist and track. 
@@ -57,3 +56,16 @@ SELECT distinct artist_name, track_name, popularity
 FROM BIT_DB.Spotifydata
 WHERE popularity <=80
 ORDER BY popularity desc;
+
+#Then I determined the average popularity for each artist and tagged them as Top Stars
+WITH popularity_average_CTE AS (
+SELECT s.artist_name,
+AVG(s.popularity) AS average_popularity
+FROM Spotifydata s
+GROUP BY s.artist_name
+)
+
+SELECT artist_name, average_popularity,
+'Top Star' AS tag
+FROM popularity_average_CTE
+WHERE average_popularity>=90;
